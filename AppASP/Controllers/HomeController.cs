@@ -77,16 +77,8 @@ namespace AppASP.Controllers
                 return View(form);
 
             _serviceInfo.Update(form.PersonalInfoForm.AspInfosFormToDalInfos());
-
-            foreach (ExperienceForm xp in form.ExperienceForms)
-            {
-                _serviceXp.Update(xp.AspExperienceFormToDalExperience());
-            }
-
-            foreach (SkillForm skill in form.SkillForms)
-            {
-                _serviceSkill.Update(skill.AspSkillFormToDalSkill());
-            }
+            form.ExperienceForms.ForEach(xp => _serviceXp.Update(xp.AspExperienceFormToDalExperience()));
+            form.SkillForms.ForEach(skill => _serviceSkill.Update(skill.AspSkillFormToDalSkill()));
 
             return RedirectToAction("Index");
         }
