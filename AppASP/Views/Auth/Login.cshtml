@@ -29,6 +29,10 @@
                 </div>
                 <br />
                 <input class="btn darkblue-bg" type="Submit" value="Se connecter" />
+                @if(!string.IsNullOrWhiteSpace(ViewBag.LoginError))
+                {
+                    <span class="text-danger">@ViewBag.error</span>   
+                }
             </form>
         </div>
     </div>

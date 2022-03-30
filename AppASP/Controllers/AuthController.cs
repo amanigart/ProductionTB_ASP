@@ -2,6 +2,7 @@
 using AppASP.Tools;
 using DAL.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using System.Data.SqlClient;
 
 namespace AppASP.Controllers
 {
@@ -27,10 +28,18 @@ namespace AppASP.Controllers
         {
             if (!ModelState.IsValid) return View(form);
 
-            User currentUser = _serviceUser.Login(form.Email, form.Passwd).DalUserToAspUser();
-            _sessionManager.CurrentUser = currentUser;
-
-            return RedirectToAction("Index", "Home");
+            try
+            {
+                User currentUser = _serviceUser.Login(form.Email, form.Passwd).DalUserToAspUser();
+                _sessionManager.CurrentUser = currentUser;
+                return RedirectToAction("Index", "Home");
+            }
+            catch (Exception ex)
+            {
+                ViewBag.LoginError = "Mauvais Login ou mot de passe.";
+                /*Console.WriteLine(ex.Message);*/
+                return View(form);
+            }
         }
 
         public IActionResult LogOut()
