@@ -34,4 +34,4 @@ EXEC SaveExperience 2011, 2014, 'EasyPronostic', 'Création & gestion de site we
 EXEC SaveExperience 2015, 2016, 'Pause', 'Sandwicherie - Accueil, service, préparations'
 EXEC SaveExperience 2016, 2018, 'Chat & Chew', 'Snack - Accueil & service'
 
-EXEC SavePersonalInfo 'Manigart', 'Adrien', 'ad.manigart@gmail.com', '0471/77.71.26', 'Place Chanoine Descamps', '14/6', 5000, 'Namur', 'B', NULL, 'Bachelier Marketing', 2009, 'Ecole Supérieure des Affaires de Namur', 'Analyst Developer .NET', 'Qualité 1', 'Qualité 2', 'Qualité 3', 'Faiblesse 1', 'Faiblesse 2', 'Faiblesse 3', 'amanigart@github.com', 'adManigart#1363';
+EXEC SavePersonalInfo 'Manigart', 'Adrien', 'ad.manigart@gmail.com', '0471/77.71.26', 'Place Chanoine Descamps', '14/6', 5000, 'Namur', 'B', '...', 'Bachelier Marketing', 2009, 'Ecole Supérieure des Affaires de Namur', 'Analyst Developer .NET', 'Qualité 1', 'Qualité 2', 'Qualité 3', 'Faiblesse 1', 'Faiblesse 2', 'Faiblesse 3', 'amanigart@github.com', 'adManigart#1363';
