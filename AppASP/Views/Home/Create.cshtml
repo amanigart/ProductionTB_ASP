@@ -1,0 +1,81 @@
+﻿@model CreateFormViewModel
+
+
+<body class="bg-greenbase">
+
+<div class="container">
+    <main role="main" class="mb-0">
+        <h1>Ajouter...</h1>
+
+        <!-- Experience -->
+        <section id="experience-form" class="section-form">
+            <h2>Expérience.</h2>
+            <form asp-action="CreateExperience">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label asp-for="ExperienceForm.YearStart">DEBUT</label>
+                            <input asp-for="ExperienceForm.YearStart" class="form-control" placeholder="Année de début" />
+                            <span asp-validation-for="ExperienceForm.YearStart" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label asp-for="ExperienceForm.YearEnd">FIN</label>
+                            <input asp-for="ExperienceForm.YearEnd" class="form-control" placeholder="Année de fin" />
+                            <span asp-validation-for="ExperienceForm.YearEnd" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label asp-for="ExperienceForm.Employer">EMPLOYEUR</label>
+                            <input asp-for="ExperienceForm.Employer" class="form-control" placeholder="Nom de l'employeur" />
+                            <span asp-validation-for="ExperienceForm.Employer" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label asp-for="ExperienceForm.JobFunction">FONCTION</label>
+                            <input asp-for="ExperienceForm.JobFunction" class="form-control" placeholder="Nom de la fonction" />
+                            <span asp-validation-for="ExperienceForm.JobFunction" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <input class="btn darkblue-bg" type="Submit" value="Ajouter l'expérience"/>
+            </form>
+        </section>
+
+        <!-- Skills -->
+        <section id="skill-form" class="section-form">
+            <h2>Compétence.</h2>
+            <form asp-action="CreateSkill">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label asp-for="SkillForm.Name">NOM</label>
+                            <input asp-for="SkillForm.Name" class="form-control" placeholder="Nom de la technologie" />
+                            <span asp-validation-for="SkillForm.Name" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label asp-for="SkillForm.Icon">ICÔNE</label>
+                            <input asp-for="SkillForm.Icon" class="form-control" placeholder="Nom de la classe d'icône" />
+                            <span asp-validation-for="SkillForm.Icon" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <input class="btn darkblue-bg" type="Submit" value="Ajouter la compétence" />
+            </form>
+        </section>
+        <br />
+    </main>
+</div>
+
+</body>

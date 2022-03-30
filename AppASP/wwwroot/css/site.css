@@ -1,0 +1,360 @@
+html {
+    font-size: 14px; /* 14px */
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: font-family: 'Nunito', sans-serif;
+    font-size: 1.4rem;
+}
+
+nav {
+    background-color: red !important;
+}
+
+nav a {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 1.12rem;
+    color: black !important;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+nav a:hover {
+    color: #FD00A9 !important;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+    font-family: 'Nunito', sans-serif;
+}
+
+p {
+    font-family: 'Red Hat Mono', monospace;
+}
+
+footer {
+    background-color: whitesmoke;
+    border: none;
+    margin-top: 10px;
+}
+
+footer p {
+    color: #3F3D56;
+    font-family: 'Nunito', sans-serif;
+    padding-bottom: -15px;
+}
+
+footer-txt {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.5rem !important;
+}
+
+img {
+    width: 100%;
+}
+
+.profile-icon {
+    width: 100%;
+}
+
+section {
+    
+    padding: 50px;
+    /*margin-bottom: 50px;*/
+    /*background-color: whitesmoke;*/
+}
+
+.section-form {
+    background-color: whitesmoke;
+}
+
+#personalinfo-form {
+
+}
+
+#experience-form {
+    margin-bottom: 25px;
+}
+
+#experience-form, #skill-form {
+    border-radius: 6px;
+}
+
+#experience-edit a, #skill-edit a{
+    font-size: 1rem;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.mycard {
+    background-color: whitesmoke;
+    margin-bottom: 25px;
+    border-radius: 6px;
+}
+
+.mycard-dark {
+    background-color: #182440;
+    color: whitesmoke;
+    height: 240px;
+}
+
+.mycard-dark hr {
+    border: 0;
+    height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #4BDAA8;
+    opacity: 0.7;
+}
+
+.mycard-body {
+    padding: 25px;
+}
+
+.mycard-title {
+    text-align: center;
+}
+
+.mycard-content h5 {
+    font-weight: 800;
+    font-size: 1.6rem;
+}
+
+.mycard-content p {
+    color: lightgray;
+    font-family: 'Nunito',sans-serif !important;
+}
+
+
+/* Home */
+.cover {
+    height: 93vh;
+    background-color: white;
+    color: #3F3D56;
+    margin-top: -20px;
+}
+
+.cover-txt {
+    margin-top: 150px;
+}
+
+#about, #experience, #skills {
+    height: 100vh;
+}
+
+#about {
+    background-color: #4BDAA8; /* aqua: #00FFAD - flash: #15EE80 */
+}
+
+#about p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.55rem;
+}
+
+#experience {
+    background-color: whitesmoke;
+    color: black;
+    font-family: 'Nunito', sans-serif;
+}
+
+#contact {
+    background-color: #182440;
+}
+
+#contact p {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* DevIcons */
+.devicons {
+    color: #3F3D56;
+    font-size: 4rem;
+}
+
+.top-buffer {
+    margin-top: 25px;
+}
+
+.contact-icon {
+    color: #DA4B7D;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+
+/* Forms */
+label {
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.7rem;
+    padding-left: 10px;
+}
+
+/*input[type=submit] {
+    color: white;
+    background-color: #4BDAA8;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.2rem;
+}
+
+input[type=submit]:hover {
+    background-color: #DA4B7D;
+}*/
+
+
+/* Login */
+.login-form {
+    width: 320px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    margin-top: 90px;
+    padding: 50px;
+    background-color: white;
+    color: black;
+}
+
+.login-input {
+    border-bottom: 2px solid #4BDAA8;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+}
+
+.avatar-circle {
+    border: 1px solid lightgrey;
+    border-radius: 50%;
+    max-width: 100px;
+}
+
+.avatar-circle-home {
+    border: 1px solid lightgrey;
+    border-radius: 50%;
+}
+
+.form-icon {
+    font-size: 1rem;
+    padding-top: 10px;
+    padding-left: 8px;
+}
+
+
+/* Color palette */
+.link-bluebase {
+    color: #4B7DDA;
+}
+
+.greenbase {
+    color: #4BDAA8;
+}
+
+.greenbase-bg {
+    background-color: #4BDAA8;
+}
+
+.greenbase-dark-bg {
+    background-color: #32C18F;
+}
+
+.greenbase-darker-bg {
+    background-color: #19A876;
+}
+
+.greenbase-ligth-bg {
+    background-color: #64F3C1;
+}
+
+.greenbase-ligther-bg {
+    background-color: #7DFFDA;
+}
+
+.bg-greenaqua {
+    background-color: #00FFAD;
+}
+
+.bg-greenflash {
+    background-color: #15EE80;
+}
+
+.darkgrey {
+    color: #3F3D56;
+}
+
+.darkblue {
+    color: #182440;
+}
+
+.darkblue-home {
+    color: #182440 !important;
+}
+.darkblue-home:hover {
+    color: #DA4B7D !important;
+}
+
+.darkblue-bg {
+    background-color: #182440;
+    color: white;
+}
+
+.darkblue-bg:hover {
+    background-color: #DA4B7D;
+    color: white;
+}
+
+.pink2 {
+    color: #DF00A9;
+}
+
+.pink-hover:hover {
+    background-color: #DA4B7D; /* #E31F71 */
+}
+
+.smokeygrey {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-greenbase {
+    background-color: #4BDAA8;
+    color: white;
+}
+
+.btn-pinkbase {
+    background-color: #DA4B7D;
+    color: white;
+}
+
+.btn-pink2 {
+    background-color: #DF00A9;
+    color: white;
+}
+
+.btn-bluebase {
+    background-color: #4B7DDA;
+    color: white;
+}
+
+.btn-purple {
+    background-color: #A84BDA;
+    color: white;
+}
+
+.bg-greenbase {
+    background-color: #4BDAA8;
+}

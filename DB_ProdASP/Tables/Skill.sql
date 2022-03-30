@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Skill]
+(
+	[id_skill] INT NOT NULL PRIMARY KEY IDENTITY,
+	[name] NVARCHAR(50) NOT NULL,
+	[icon] NVARCHAR(100) NOT NULL
+)

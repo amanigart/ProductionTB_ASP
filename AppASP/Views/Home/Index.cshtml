@@ -1,0 +1,171 @@
+﻿@model IndexViewModel
+
+@{
+    ViewData["Title"] = "Adrien Manigart";
+}
+
+<body class="btn-greenbase">
+
+<!-- section INTRO -->
+ <div class="jumbotron cover">
+    <div class="container">
+        <div class="row">
+            <div class="col cover-txt">
+                <h1 class="display-4">@Model.PersonalInfos.Profile</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <hr class="my-4">
+                @*<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>*@
+                <p><span class="badge greenbase-dark-bg">Web Apps</span> / <span class="badge greenbase-bg">APIs</span> / <span class="badge greenbase-ligth-bg">Databases</span></p>
+            </div>
+            <div class="col">
+                <img src="~/assets/images/homeIllustration.jpg" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <main role="main" class="mb-0">
+        <!-- section ABOUT -->
+        <section id="about">
+            <div class="row">
+                <h1>About.</h1>
+                <br /><br /><br />
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <img class="avatar-circle-home" src="~/assets/images/dev-avatar.png" />
+                </div>
+                <div class="col">
+                    <div class="container mt-3">
+                        <a href="#presentation" class="btn darkblue-bg" data-bs-toggle="collapse">Présentation</a>
+                        <a href="#diplome" class="btn darkblue-bg" data-bs-toggle="collapse">Diplôme</a>
+                        <a href="#qualites" class="btn darkblue-bg" data-bs-toggle="collapse">Qualités / Défauts</a>
+                        <a href="#autres" class="btn darkblue-bg" data-bs-toggle="collapse">Autres</a>
+                        <br /><br />
+                        <div id="presentation" class="collapse show">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                        </div>
+                        <div id="diplome" class="collapse">
+                            <p>@Model.PersonalInfos.Degree - @Model.PersonalInfos.DegreeSchool (@Model.PersonalInfos.DegreeDate)</p>
+                        </div>
+                        <div id="qualites" class="collapse">
+                            <div class="row">
+                                <div class="col">
+                                    <p><i class="fa-solid fa-plus darkblue"></i> @Model.PersonalInfos.Strength1</p>
+                                    <p><i class="fa-solid fa-plus darkblue"></i> @Model.PersonalInfos.Strength2</p>
+                                    <p><i class="fa-solid fa-plus darkblue"></i> @Model.PersonalInfos.Strength3</p>
+                                </div>
+                                <div class="col">
+                                    <p><i class="fa-solid fa-minus darkblue"></i> @Model.PersonalInfos.Weakness1</p>
+                                    <p><i class="fa-solid fa-minus darkblue"></i> @Model.PersonalInfos.Weakness2</p>
+                                    <p><i class="fa-solid fa-minus darkblue"></i> @Model.PersonalInfos.Weakness3</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="autres" class="collapse">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </section>
+
+        <!-- section EXPERIENCE -->
+        <section id="experience">
+            <h1>Experience.</h1>
+            <br />
+            <div class="row">
+                @foreach(var xp in Model.Experiences)
+                {
+                    <div class="col-4">
+                        <div class="mycard mycard-dark">
+                            <div class="mycard-body">
+                                <div class="mycard-title">
+                                    @xp.YearStart - @xp.YearEnd
+                                </div>
+                                <hr>
+                                <div class="mycard-content">
+                                    <h5>@xp.Employer</h5>
+                                    <p>@xp.JobFunction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </section>
+
+        <!-- section SKILLS -->
+        <section id="skills">
+            <h1>Skills.</h1>
+            <br />
+            <div class="row">
+                @foreach(var skill in Model.Skills)
+                {
+                    <div class="col-2 text-center top-buffer">
+                        <i class="@skill.Icon devicons text-center"></i> 
+                        <p>@skill.Name</p>
+                    </div>
+                }
+            </div>
+        </section>
+
+        <!-- section Contact -->
+        <section id="contact">
+            <h1>Contact.</h1>
+            <br />
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <p>
+                            <i class="fa-solid fa-location-dot contact-icon"></i>  
+                            @Model.PersonalInfos.AdStreet, 
+                            @Model.PersonalInfos.AdNumber - 
+                            @Model.PersonalInfos.AdZip 
+                            @Model.PersonalInfos.AdCity
+                         </p>
+                    </div>
+                    <div>
+                        <p><i class="fa-solid fa-envelope contact-icon"></i> @Model.PersonalInfos.Email</p>
+                        <p><i class="fa-solid fa-phone contact-icon"></i> @Model.PersonalInfos.Phone</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <p><i class="fa-brands fa-github contact-icon"></i> @Model.PersonalInfos.Github</p>
+                    <p><i class="fa-brands fa-discord contact-icon"></i> @Model.PersonalInfos.Discord</p>
+                </div>
+                @*<div class="col">
+                    <form>
+                        <input type="text" name="emailContact" placeholder="Entrez votre email..." />
+                        <textarea name="message" placeholder="Rédigez votre message..." ></textarea>
+                        <input type="submit" value="Envoyer" />
+                    </form>
+                </div>*@
+            </div>
+        </section>
+    </main>
+</div>
+
+</body>
+
+

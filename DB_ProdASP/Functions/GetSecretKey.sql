@@ -1,0 +1,7 @@
+﻿CREATE FUNCTION [dbo].[GetSecretKey]
+()
+RETURNS NVARCHAR(200)
+AS
+BEGIN
+	RETURN '1 H4v3 N0 1d34 Wh4t 1 4m D01ng';
+END

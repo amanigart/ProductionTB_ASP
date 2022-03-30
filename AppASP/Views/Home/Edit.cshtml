@@ -1,0 +1,284 @@
+﻿@model EditFormViewModel
+
+<body class="bg-greenbase">
+    <div class="container">
+        <main role="main" class="mb-0">
+
+            <h1>Modifier mon CV</h1>
+
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!-- Personal Infos -->
+                <div class="full-width-bg">
+                    <section id="personalinfo-edit">
+                        <h2>Informations personnelles.</h2>
+                        <div class="mycard">
+                            <div class="mycard-body">
+                                <h4>Profil</h4>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label asp-for="PersonalInfoForm.Profile">Profil</label>
+                                        <input asp-for="PersonalInfoForm.Profile" class="form-control" placeholder="Profil de développeur" />
+                                        <span asp-validation-for="PersonalInfoForm.Profile" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.FirstName">Prénom</label>
+                                            <input asp-for="PersonalInfoForm.FirstName" class="form-control" placeholder="Prénom" />
+                                            <span asp-validation-for="PersonalInfoForm.FirstName" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.LastName">Nom</label>
+                                            <input asp-for="PersonalInfoForm.LastName" class="form-control" placeholder="Nom" />
+                                            <span asp-validation-for="PersonalInfoForm.LastName" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <h4>Contact</h4>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.Email">Email</label>
+                                            <input asp-for="PersonalInfoForm.Email" class="form-control" placeholder="Email" />
+                                            <span asp-validation-for="PersonalInfoForm.Email" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.Phone">Téléphone</label>
+                                            <input asp-for="PersonalInfoForm.Phone" class="form-control" placeholder="Téléphone" />
+                                            <span asp-validation-for="PersonalInfoForm.Phone" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.Github">GitHub</label>
+                                            <input asp-for="PersonalInfoForm.Github" class="form-control" placeholder="Github" />
+                                            <span asp-validation-for="PersonalInfoForm.Github" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.Discord">Discord</label>
+                                            <input asp-for="PersonalInfoForm.Discord" class="form-control" placeholder="Github" />
+                                            <span asp-validation-for="PersonalInfoForm.Discord" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <h4>Adresse</h4>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <input asp-for="PersonalInfoForm.AdStreet" class="form-control" placeholder="Rue" />
+                                            <span asp-validation-for="PersonalInfoForm.AdStreet" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <input asp-for="PersonalInfoForm.AdNumber" class="form-control" placeholder="Numéro" />
+                                            <span asp-validation-for="PersonalInfoForm.AdNumber" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <input asp-for="PersonalInfoForm.AdZip" class="form-control" placeholder="Code postal" />
+                                            <span asp-validation-for="PersonalInfoForm.AdZip" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <input asp-for="PersonalInfoForm.AdCity" class="form-control" placeholder="Ville" />
+                                            <span asp-validation-for="PersonalInfoForm.AdCity" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <h4>Divers</h4>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.DriverLicense">Permis</label>
+                                            <input asp-for="PersonalInfoForm.DriverLicense" class="form-control" placeholder="Permis" />
+                                            <span asp-validation-for="PersonalInfoForm.DriverLicense" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.RecruitingAid">Aide à l'emploi</label>
+                                            <textarea asp-for="PersonalInfoForm.RecruitingAid" placeholder="Aide emploi" class="form-control"></textarea>
+                                            <span asp-validation-for="PersonalInfoForm.RecruitingAid" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <h4>Diplome</h4>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.Degree">Diplôme</label>
+                                            <input asp-for="PersonalInfoForm.Degree" class="form-control" placeholder="Diplome" />
+                                            <span asp-validation-for="PersonalInfoForm.Degree" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.DegreeSchool">Ecole</label>
+                                            <input asp-for="PersonalInfoForm.DegreeSchool" class="form-control" placeholder="Ecole" />
+                                            <span asp-validation-for="PersonalInfoForm.DegreeSchool" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.DegreeDate">Année</label>
+                                            <input asp-for="PersonalInfoForm.DegreeDate" class="form-control" placeholder="Année" />
+                                            <span asp-validation-for="PersonalInfoForm.DegreeDate" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <h4>Personnalité</h4>
+                                <h6>Qualités</h6>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.Strength1">Qualité #1</label>
+                                            <input asp-for="PersonalInfoForm.Strength1" class="form-control" placeholder="Qualité" />
+                                            <span asp-validation-for="PersonalInfoForm.Strength1" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.Strength2">Qualité #2</label>
+                                            <input asp-for="PersonalInfoForm.Strength2" class="form-control" placeholder="Qualité" />
+                                            <span asp-validation-for="PersonalInfoForm.Strength2" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.Strength3">Qualité #3</label>
+                                            <input asp-for="PersonalInfoForm.Strength3" class="form-control" placeholder="Qualité" />
+                                            <span asp-validation-for="PersonalInfoForm.Strength3" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h6>Défauts</h6>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.Weakness1">Défaut #1</label>
+                                            <input asp-for="PersonalInfoForm.Weakness1" class="form-control" placeholder="défaut" />
+                                            <span asp-validation-for="PersonalInfoForm.Weakness1" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.Weakness2">Défaut #2</label>
+                                            <input asp-for="PersonalInfoForm.Weakness2" class="form-control" placeholder="défaut" />
+                                            <span asp-validation-for="PersonalInfoForm.Weakness2" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label asp-for="PersonalInfoForm.Weakness3">Défaut #3</label>
+                                            <input asp-for="PersonalInfoForm.Weakness3" class="form-control" placeholder="défaut" />
+                                            <span asp-validation-for="PersonalInfoForm.Weakness3" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Experience -->
+                <div class="full-width-bg">
+                    <section id="experience-edit">
+                        <h2>Expérience.</h2>
+                        @for (int i = 0; i < Model.ExperienceForms.Count; i++)
+                        {
+                            <div class="mycard">
+                                <div class="mycard-body">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <input asp-for="@Model.ExperienceForms[i].IdExperience" type="hidden"/>
+                                            <div class="form-group">
+                                                <label asp-for="@Model.ExperienceForms[i].YearStart">Début</label>
+                                                <input asp-for="@Model.ExperienceForms[i].YearStart" class="form-control" placeholder="Année de début" />
+                                                <span asp-validation-for="@Model.ExperienceForms[i].YearStart" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label asp-for="@Model.ExperienceForms[i].Employer">Employeur</label>
+                                                <input asp-for="@Model.ExperienceForms[i].Employer" class="form-control" placeholder="Nom de l'employeur" />
+                                                <span asp-validation-for="@Model.ExperienceForms[i].Employer" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="form-group">
+                                                <label asp-for="@Model.ExperienceForms[i].YearEnd">Fin</label>
+                                                <input asp-for="@Model.ExperienceForms[i].YearEnd" class="form-control" placeholder="Année de fin" />
+                                                <span asp-validation-for="@Model.ExperienceForms[i].YearEnd" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label asp-for="@Model.ExperienceForms[i].JobFunction">Fonction</label>
+                                                <input asp-for="@Model.ExperienceForms[i].JobFunction" class="form-control" placeholder="Nom de la fonction" />
+                                                <span asp-validation-for="@Model.ExperienceForms[i].JobFunction" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @Html.ActionLink("Supprimer", "DeleteExperience", new { id = Model.ExperienceForms[i].IdExperience })
+                                </div>
+                            </div>
+                        }
+                    </section>
+                </div>
+
+                <!-- Skills -->
+                <div class="full-width-bg">
+                    <section id="skill-edit">
+                        <h2>Compétences / Technologies.</h2>
+                        <div class="row">
+                            @for(int i = 0; i < Model.SkillForms.Count; i++)
+                            {
+                                <div class="col-4">
+                                    <div class="mycard">
+                                        <div class="mycard-body">
+                                            <input asp-for="@Model.SkillForms[i].IdSkill" type="hidden"/>
+                                            <div class="form-group">
+                                                <label asp-for="@Model.SkillForms[i].Name">Nom</label>
+                                                <input asp-for="@Model.SkillForms[i].Name" class="form-control" placeholder="Nom de la technologie" />
+                                                <span asp-validation-for="@Model.SkillForms[i].Name" class="text-danger"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label asp-for="@Model.SkillForms[i].Icon">Icône</label>
+                                                <input asp-for="@Model.SkillForms[i].Icon" class="form-control" placeholder="Nom de la classe d'icône" />
+                                                <span asp-validation-for="@Model.SkillForms[i].Icon" class="text-danger"></span>
+                                            </div>
+                                            @Html.ActionLink("Supprimer", "DeleteSkill", new { id = Model.SkillForms[i].IdSkill })
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </section>
+                </div>
+                <input class="btn darkblue-bg" type="Submit" value="Enregistrer les modifications" />
+                <br />
+                <br />
+            </form>
+
+        </main>
+    </div>
+</body>

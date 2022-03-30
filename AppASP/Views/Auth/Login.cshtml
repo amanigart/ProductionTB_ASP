@@ -1,0 +1,35 @@
+﻿@model LoginForm
+
+<body class="btn-greenbase">
+    <div class="login-form">
+        <img class="avatar-circle" src="~/assets/images/dev-avatar.png" />
+        <br /><br />
+        <h1>Connexion</h1>
+        <div>
+            <form asp-action="Login">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group row">
+                    <div class="col-1">
+                        <i class="fa-solid fa-user form-icon"></i>
+                    </div>
+                    <div class="col">
+                        <input asp-for="Email" class="form-control login-input" placeholder="username@email.com" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <br />
+                <div class="form-group row">
+                    <div class="col-1">
+                        <i class="fa-solid fa-key form-icon"></i>
+                    </div>
+                    <div class="col">
+                        <input asp-for="Passwd" class="form-control login-input" placeholder="*************" />
+                        <span asp-validation-for="Passwd" class="text-danger"></span>
+                    </div>
+                </div>
+                <br />
+                <input class="btn darkblue-bg" type="Submit" value="Se connecter" />
+            </form>
+        </div>
+    </div>
+</body>

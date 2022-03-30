@@ -1,0 +1,77 @@
+﻿@using AppASP.Tools
+@inject SessionManager _session
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AppASP</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AppASP.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Mono&family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand darkblue-home" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa-solid fa-house"></i></a>
+                @if (!(_session.CurrentUser is null))
+                {
+                    <p>
+                        <a class="nav-item darkblue-home" asp-area="" asp-controller="Home" asp-action="Create">Ajouter</a> |  
+                        <a class="nav-item darkblue-home" asp-area="" asp-controller="Home" asp-action="Edit">Modifier</a> |
+                        <a class="nav-item darkblue-home" asp-area="" asp-controller="Auth" asp-action="LogOut">Déconnexion</a>
+                    </p>
+                }
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                    <ul class="navbar-nav flex-grow-1 me-auto">
+                        <li class="nav-item ms-auto">
+                            <a class="nav-link pink2" href="#about">About.</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink2" href="#experience">Experience.</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink2" href="#skills">Skills.</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink2" href="#contact">Contact.</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <a href="~/assets/images~/assets/images/CV_Adrien-Manigart.txt" download>
+                            <button class="btn darkblue-bg btn-sm"><i class="fa-solid fa-file-lines"></i> Télécharger CV</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    @*<div class="container">*@
+        <main role="main" class="mb-0">
+            @RenderBody()
+        </main>
+    @*</div>*@
+
+    <footer class="border-top footer text-muted footer-txt">
+        <div>
+            <p class="text-center">
+                &copy; 2022 - Made with <i class="devicon-csharp-plain"></i> + <i class="devicon-html5-plain-wordmark"></i> + <i class="devicon-css3-plain-wordmark"></i>
+            </p>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
